@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表单-登录注册</title>
+  </head>
+  <body>
+    <h1>注册</h1>
+
+    <!--
+    表单form
+    action：表单提交的位置（可以是网站，也可以是一个请求处理地址）
+    method：post,get    提交方式
+        get 方式提交：我们可以在url中看到我们的信息，不安全，但高效
+        post 方式提交：比较安全，传输大文件
+-->
+    <form action="1. 网页基本内容.html" method="get">
+      <!--
+	  表单form
+    action：表单提交的位置（可以是网站，也可以是一个请求处理地址）
+    method：post,get    提交方式
+        get 方式提交：我们可以在url中看到我们的信息，不安全，但高效
+        post 方式提交：比较安全，传输大文件
+-->
+      <form action="1. 网页基本内容.html" method="post">
+        <!--
+    文本输入框：input type = "text"
+    value="kerry"   默认初始值
+    maxlength="8"   最长能写几个字符
+    size="30"       文本框的长度
+  -->
+        -
+        <p>
+          名字：<input
+            type="text"
+            name="username"
+            placeholder="请输入用户名"
+            required
+          />
+        </p>
+        <!--密码框：input type = "password"-->
+        <p>密码：<input type="password" name="pwd" hidden /></p>
+
+        <!--
+    单选标签
+    input type="radio"
+    value：单选框的值
+    name：表示组，name一样表示同一组，同一组只能选一个
+  -->
+        <p>
+          性别：
+          <input type="radio" value="boy" name="gender" disabled />男
+          <input type="radio" value="girl" name="gender" />女
+        </p>
+        <!--
+          多选框
+          input type ="checkbox" checked 
+          checked表示默认选中
+        -->
+        <p>
+          爱好： <input type="checkbox" value="sleep" name="hobby" />睡觉
+          <input type="checkbox" value="game" name="hobby" checked />游戏
+          <input type="checkbox" value="sports" name="hobby" />运动
+          <input type="checkbox" value="code" name="hobby" />编程
+        </p>
+        <!--
+          按钮
+          input type ="button"  普通按钮
+          input type = "image"  图像按钮
+          input type = "submit" 提交按钮
+          input type = "reset"  重置按钮
+        -->
+        <p>
+          按钮：
+          <input type="button" name="btn1" value="点击" />
+          <!-- <input type="image" src="../resources/image/1920.jpg" /> -->
+        </p>
+        <!--下拉框-->
+        <p>
+          下拉框
+          <select name="列表名称">
+            <option value="china">中国</option>
+            <option value="us">美国</option>
+            <option value="uk" selected>英国</option>
+            <option value="japen">日本</option>
+          </select>
+        </p>
+        <!--文本域-->
+        <p>
+          反馈
+          <textarea name="textarea" cols="50" rows="10"></textarea>
+        </p>
+        <!--文件域-->
+        <p>
+          <input type="file" name="files" />
+          <input type="button" value="上传" name="upload" />
+        </p>
+
+        <!--邮箱验证-->
+        <p>
+          邮箱:
+          <input type="email" name="email" />
+        </p>
+        <!--url验证-->
+        <p>
+          url:
+          <input type="url" name="url" />
+        </p>
+
+        <!--数字验证-->
+        <p>
+          商品数量
+          <input type="number" name="num" max="100" min="10" step="10" />
+        </p>
+
+        <!--滑块-->
+        <p>
+          音量
+          <input type="range" name="voice" min="0" max="100" step="2" />
+        </p>
+
+        <!--搜索框-->
+        <p>
+          搜索：
+          <input type="search" name="search" />
+        </p>
+
+        <!--增强鼠标可用性-->
+        <p>
+          <label for="mark">点我点我</label>
+          <input type="text" id="mark" />
+        </p>
+        <p>
+          <input type="submit" />
+          <input type="reset" value="清空表单" />
+        </p>
+      </form>
+    </form>
+  </body>
+</html>
